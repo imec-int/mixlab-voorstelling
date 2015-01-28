@@ -55,6 +55,7 @@ body{
 
 main {
 	overflow-x: hidden;
+	height:100vh;
 }
 
 section {
@@ -92,14 +93,7 @@ section {
   	width:100vw;
   	display: table;
   	transition: transform 1s ease-out;
-
-.title{
-	position: fixed;
-	width: 100%;
-	font-family: 'Gotham';
-	font-size: 5em;
-	color: rgba(255,255,255,0.9);
-}
+  }
 
 .big{
 	font-size: 10em;
@@ -274,3 +268,64 @@ h2{
 	background-position: center;
 	background-size: cover;
 }
+
+
+
+
+/*
+              .__                __  .__
+_____    ____ |__| _____ _____ _/  |_|__| ____   ____   ______
+\__  \  /    \|  |/     \\__  \\   __\  |/  _ \ /    \ /  ___/
+ / __ \|   |  \  |  Y Y  \/ __ \|  | |  (  <_> )   |  \\___ \
+(____  /___|  /__|__|_|  (____  /__| |__|\____/|___|  /____  >
+     \/     \/         \/     \/                    \/     \/
+*/
+
+.slideUp {
+
+	-webkit-animation: slideUp 1s;
+	        animation: slideUp 1s;
+	-webkit-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+
+	}
+
+.slideUp h1 {
+	transition: opacity 1500ms ease-in-out;
+	opacity: 1;
+}
+
+.slideUp h2, .slideUp h4 {
+	transition: opacity 3500ms ease-in-out;
+	opacity: 1;
+}
+
+
+
+@-webkit-keyframes slideUp {
+	from {-webkit-transform: translateY(100%);transform: translateY(100%);
+	}
+	to {-webkit-transform: translateY(0%);transform: translateY(0%);
+	}
+}
+@keyframes slideUp {
+	from {-webkit-transform: translateY(100%);transform: translateY(100%);}
+	to {-webkit-transform: translateY(0%);transform: translateY(0%);}
+}
+
+@-webkit-keyframes slideDown {
+	from {-webkit-transform: translateY(0%);transform: translateY(0%);
+	}
+	to {-webkit-transform: translateY(100%);transform: translateY(100%);
+	}
+}
+@keyframes slideDown {
+	from {-webkit-transform: translateY(0%);transform: translateY(0%);}
+	to {-webkit-transform: translateY(100%);transform: translateY(100%);}
+}
+
+.fade {
+	transition: opacity 500ms ease-out;
+	opacity: 0;
+}
+
